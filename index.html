@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle</title>
+    <style>
+        /* Reset de estilo e configurações gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #4caf50, #1d8e8e);
+            color: #fff;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        /* Contêiner do painel */
+        .panel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            max-width: 350px;
+            margin: auto;
+        }
+
+        /* Card do painel de controle */
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto;
+            backdrop-filter: blur(5px); /* Adiciona um desfoque de fundo */
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 2em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Estilo dos botões */
+        .button {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-4px);
+        }
+
+        .button:active {
+            background-color: #00448a;
+            transform: translateY(0);
+        }
+
+        /* Estilo responsivo para telas pequenas */
+        @media screen and (max-width: 480px) {
+            .card {
+                width: 90%;
+                padding: 25px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 14px;
+            }
+
+            .card h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="panel-container">
+        <div class="card">
+            <h2>Painel de Controle</h2>
+            <a href="cadastro_usuarios.php" class="button">Cadastro de Usuários</a>
+            <a href="cadastro_tarefas.php" class="button">Cadastro de Tarefas</a>
+            <a href="visualizar_tarefas.php" class="button">Visualizar Tarefas</a>
+        </div>
+    </div>
+</body>
+</html>
